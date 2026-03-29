@@ -1,14 +1,5 @@
 class ApiController < ApplicationController
-
-def teste
-
-render json: {
-
-nome: "Jorge Luis Ferreira",
-profissao: "Advogado"
-
-}
-
-end
-
+  def teste
+    render json: { mensagem: "Backend funcionando!", status: "ok", timestamp: Time.now }
+  end
 end
