@@ -33,8 +33,6 @@ Rails.application.configure do
   # ✅ JOBS (sem banco extra)
   config.active_job.queue_adapter = :async
 
-  # ✅ ACTION CABLE (sem banco extra)
-  config.action_cable.adapter = :async
 
   # Mailer
   config.action_mailer.default_url_options = { host: "example.com" }
