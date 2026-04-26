@@ -7,6 +7,8 @@ Rails.application.configure do
   # Eager load code on boot for better performance.
   config.eager_load = true
 
+  config.force_ssl = true
+
   # Full error reports are disabled.
   config.consider_all_requests_local = false
 
