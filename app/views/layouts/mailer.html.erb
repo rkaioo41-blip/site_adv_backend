@@ -1,13 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <style>
-      /* Email styles need to be inline */
-    </style>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style>
+    /* Email styles need to be inline */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #333333;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+    }
+    .header {
+      background-color: #2c2c2c;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #7a7a7a;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: normal;
+      color: #f4f4f4;
+      letter-spacing: 0.5px;
+    }
+    .content {
+      padding: 30px;
+      background-color: #ffffff;
+    }
+    .footer {
+      background-color: #2c2c2c;
+      padding: 15px;
+      text-align: center;
+      font-size: 11px;
+      color: #b0b0b0;
+      border-top: 1px solid #4a4a4a;
+    }
+    .footer p {
+      margin: 5px 0;
+    }
+    a {
+      color: #7a7a7a;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Jorge Luis Ferreira dos Santos</h1>
+    </div>
+    <div class="content">
+      <%= yield %>
+    </div>
+    <div class="footer">
+      <p>Escritório Jorge Luis – Advocacia</p>
+      <p>Av. T-4, 619 - Setor Bueno, Goiânia - GO</p>
+      <p>advgjorgeluis@gmail.com | (62) 98158-6468</p>
+    </div>
+  </div>
+</body>
 </html>

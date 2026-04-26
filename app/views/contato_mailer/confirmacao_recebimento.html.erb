@@ -3,11 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-    .header { background: #d4af37; padding: 20px; text-align: center; color: #0a0a0a; }
-    .content { background: #f5f5f5; padding: 30px; }
-    .footer { background: #0a0a0a; color: #fff; padding: 15px; text-align: center; font-size: 12px; }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #333333;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+    }
+    .header {
+      background-color: #2c2c2c;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #7a7a7a;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: normal;
+      color: #f4f4f4;
+    }
+    .content {
+      padding: 30px;
+      background-color: #ffffff;
+    }
+    .info-box {
+      background-color: #f9f9f9;
+      border-left: 3px solid #7a7a7a;
+      padding: 15px;
+      margin: 20px 0;
+      font-style: italic;
+      color: #4a4a4a;
+    }
+    .label {
+      font-weight: bold;
+      color: #2c2c2c;
+      display: inline-block;
+      min-width: 80px;
+    }
+    .footer {
+      background-color: #2c2c2c;
+      padding: 15px;
+      text-align: center;
+      font-size: 11px;
+      color: #b0b0b0;
+      border-top: 1px solid #4a4a4a;
+    }
+    .footer p {
+      margin: 5px 0;
+    }
   </style>
 </head>
 <body>
@@ -22,26 +72,28 @@
       <p>Recebemos sua mensagem e em breve entraremos em contato.</p>
       
       <p><strong>Resumo da sua solicitação:</strong></p>
-      <ul>
+      <ul style="margin: 10px 0 20px 0; padding-left: 20px;">
         <li><strong>Área:</strong> <%= @contato.area %></li>
         <li><strong>Assunto:</strong> <%= @contato.assunto || 'Não informado' %></li>
       </ul>
       
       <p><strong>Sua mensagem:</strong></p>
-      <p style="background: #fff; padding: 15px; border-left: 3px solid #d4af37;">
-        <%= @contato.mensagem %>
-      </p>
+      <div class="info-box">
+        <%= simple_format(@contato.mensagem) %>
+      </div>
       
       <p>Entraremos em contato o mais breve possível através do e-mail ou telefone informado.</p>
       
-      <p>Atenciosamente,<br>
-      <strong>Dr. Jorge Luis</strong><br>
-      OAB/GO - Advogado</p>
+      <p style="margin-top: 30px;">
+        Atenciosamente,<br>
+        <strong>Equipe Jorge Luis – Advocacia</strong>
+      </p>
     </div>
     
     <div class="footer">
-      <p>Escritório Jorge Luis - Advocacia</p>
+      <p>Escritório Jorge Luis – Advocacia</p>
       <p>Av. T-4, 619 - Setor Bueno, Goiânia - GO</p>
+      <p>advgjorgeluis@gmail.com | (62) 98158-6468</p>
     </div>
   </div>
 </body>
